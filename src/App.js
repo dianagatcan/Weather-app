@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
+import Input from "./input";
 import axios from "axios";
 
 function App() {
   const [info, setInfo] = useState(null);
+  const [city, setCity] = useState('Paris');
 
-  const city = 'Paris'
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=85fc7ae3e9a3345a538f1c9368c5f935`
+
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${api}`
 
   //when the component mounts, you use the useEffect hook
   useEffect(()=>{
@@ -16,11 +18,18 @@ function App() {
     .then((response) => {
       setInfo(response.data)
     })
-  }, [])
+  }, [city])
+
+  function saveCity(input){
+    setCity(input)
+    console.log(city)
+  }
 
   if(!info) return null;
   return(<div>
+    <Input responseCity={saveCity} />
     <h1 >{info.sys.country}</h1>
+    <p>{city}</p>
   </div>)
 
   
