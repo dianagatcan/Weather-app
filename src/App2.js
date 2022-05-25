@@ -6,8 +6,6 @@ export default function App2() {
   const [info, setInfo] = useState(null);
   const [city, setCity] = useState('Paris');
 
-  const api = 'b043b5e3f649574ce493614fb6455bb8'
-
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${api}`
 
   //when the component mounts, you use the useEffect hook
