@@ -17,7 +17,10 @@ export default function Input(props){
 
     return(
         <div>
-            <input value={input} onChange={handleChange} onKeyPress={(e)=>handleKeyPress(e)} placeholder="Input city"></input>
+            <input value={input} 
+            onChange={handleChange} 
+            onKeyPress={(e)=>handleKeyPress(e)} 
+            placeholder="Input city"></input>
         </div>
     )
 
