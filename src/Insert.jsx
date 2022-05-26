@@ -1,15 +1,26 @@
 import React, {useState} from "react";
 
+
 export default function Insert(props){
     const [input, setInput] = useState('');
 
     function handleKeyDown(event){
+
+        const api = 'b2541e68db5723fa17feb71c4a3a4a74';
+
         //When the user press Enter key:
         // - set 'city' as a parameter for the function received from the parrent - App
         // - reset the input and clear Input text
         if(event.key === "Enter"){
-            props.passCity(input);
-            setInput('');
+            async function getTemperature(){
+                const request = new Request(`https://api.openweathermap.org/data/2.5/weather?q=${input}&units=metric&appid=${api}`);
+                const jsonResponse = await (await fetch(request)).json()
+                props.passCity(jsonResponse.main.temp);
+            }
+            getTemperature(input)
+            // setInput('');
+
+
         }
 
     }
@@ -18,6 +29,9 @@ export default function Insert(props){
     function handleChange(event){
         setInput(event.target.value)
     }
+
+
+    
 
 
     return(<div>
