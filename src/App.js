@@ -3,12 +3,13 @@ import Display from "./Display";
 
 export default function App(){
     const [input, setInput] = useState('');
-    const [response, setResponse]= useState('');
-
+    const [response, setResponse]= useState("");
+    const [display, setDisplay] = useState(false)
 
     function handleKeyDown(event){
-       
-        //When the user press Enter key:
+        const api = process.env.REACT_APP_API;
+
+        //When user press Enter key:
         if(event.key === "Enter"){
             async function getTemperature(){
                 const request = new Request(`https://api.openweathermap.org/data/2.5/weather?q=${input}&units=metric&appid=${api}`);
@@ -18,11 +19,13 @@ export default function App(){
             }
             getTemperature(input);
             setInput('');
+            setDisplay(true)
         }
     }
 
     //setCity every time when user is typing
     function handleChange(event){
+        setDisplay(false)
         setInput(event.target.value)
     }
 
@@ -35,7 +38,8 @@ export default function App(){
                 onKeyDown={(e) => handleKeyDown(e)}
                 placeholder="Type the city">
             </input>
-            <Display data={response} />
+            {display ? <Display data={response} /> : <></> }
+            
         </div>
     )
 
