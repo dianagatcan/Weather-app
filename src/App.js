@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Display from "./Display";
+import Display from "./Display/Display";
 
 export default function App(){
     const [input, setInput] = useState('');

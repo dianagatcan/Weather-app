@@ -1,0 +1,37 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+
+.displayContainer{
+    display: flex;
+    width: 350px;
+    font-family: Poiret One;
+}
+
+.temperature{
+    width: 200px;
+    font-size: 24px;
+    display: inline-block;
+    background-color: #112D4E;
+    color: white;
+    text-transform: uppercase;
+    padding-top: 30px;
+}
+
+span{
+    margin-top: 30px;
+    font-size: 50px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.description{
+    width: 150px;
+    background-color: #DBE2EF;
+}
+
+
+.weatherDescription{
+margin-top: 7px;
+}

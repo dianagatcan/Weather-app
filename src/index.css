@@ -5,27 +5,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: bisque;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  background-color: #F9F7F7;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 140%;
 }
 
 input {
+
   height: 50px;
   width: 300px;
   font-size: 20px;
-  margin: 0 auto;
+  margin: 40px auto;
+  border-radius:10px;
   display: flex;
-}
-
-h1 {
-  height: 80px;
-  width: 300px;
-  font-size: 50px;
-  margin: 0 auto;
-  display: flex;
-  background-color: aqua;
+  text-align: center;
 }
