@@ -1,25 +1,35 @@
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
 
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 .displayContainer{
     display: flex;
     width: 350px;
     font-family: Poiret One;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .temperature{
     width: 200px;
-    font-size: 24px;
-    display: inline-block;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
     background-color: #112D4E;
     color: white;
     text-transform: uppercase;
-    padding-top: 30px;
+    align-items: center;
 }
 
 span{
     margin-top: 30px;
-    font-size: 50px;
+    font-size: 45px;
 }
 
 .bold{
@@ -29,9 +39,12 @@ span{
 .description{
     width: 150px;
     background-color: #DBE2EF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
 .weatherDescription{
-margin-top: 7px;
+margin-top: -1px;
 }
