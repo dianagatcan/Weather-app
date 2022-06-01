@@ -26,3 +26,13 @@
 .date{
     font-weight: bold;
 }
+@media only screen and (max-width: 1080px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .card{
+        margin-bottom: 10px;
+        width:250px;
+    }
+  }
