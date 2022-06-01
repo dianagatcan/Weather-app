@@ -1,12 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+
 .row{
-    /* background-color: white; */
     width:1000px;
     display: flex;
-    /* flex-direction: column; */
     align-items: center;
-    /* justify-content: center; */
     margin: 0 10px;
-    /* border: 1px solid #eee; */
     padding: 15px;
     border-radius: 10px;
     justify-content: space-between;
@@ -19,4 +18,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius:10px;
+    border: 1px solid #112D4E;
+    font-family: Poiret One;
+}
+
+.date{
+    font-weight: bold;
 }

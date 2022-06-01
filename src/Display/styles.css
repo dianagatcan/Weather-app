@@ -25,6 +25,7 @@
     color: white;
     text-transform: uppercase;
     align-items: center;
+    border-radius: 10px 0px 0px 10px;
 }
 
 span{
@@ -37,14 +38,42 @@ span{
 }
 
 .description{
-    width: 150px;
+    width: 200px;
     background-color: #DBE2EF;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 0px 10px 10px 0px;
 }
 
 
 .weatherDescription{
 margin-top: -1px;
+}
+
+
+button {
+  background-color: transparent;
+  border: 2px solid #112D4E;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  /* min-height: 60px;
+  min-width: 0; */
+  padding: 16px 24px;
+  text-align: center;
+  font-family: Poiret One;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+
+button:hover {
+  color: #fff;
+  background-color: #112D4E;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
 }
