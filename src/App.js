@@ -14,7 +14,6 @@ export default function App(){
             async function getTemperature(){
                 const request = new Request(`https://api.openweathermap.org/data/2.5/weather?q=${input}&units=metric&appid=${api}`);
                 const jsonResponse = await (await fetch(request)).json();
-                // const temperature = jsonResponse.main.temp
                 setResponse(jsonResponse)
             }
             getTemperature(input);
@@ -31,7 +30,7 @@ export default function App(){
 
     return(
         <div>
-            <input 
+            <input data-testid="input" 
                 value={input}
                 type="text"
                 onChange={handleChange}
